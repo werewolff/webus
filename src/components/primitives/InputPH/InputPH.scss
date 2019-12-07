@@ -1,0 +1,102 @@
+// Mixins
+@import "../../../styles/scss/mixins";
+
+/* Custom input with placeholder */
+
+$ph_label_color: #9B9B9B;
+$ph_main_color: #4A4A4A;
+
+.input-ph {
+  display: block;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 0;
+  letter-spacing: 3px;
+  text-align: center;
+  &.input-ph_loading::before {
+    content: '';
+    border-bottom: 2px solid #4A4A4A;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 1.25rem;
+    left: 0;
+    right: 0;
+    transition: width 1s;
+    @include animation(input-ph-loading 1s infinite ease-in-out);
+  }
+
+  &.input-ph_loading > input {
+    border-bottom: 2px solid transparent;
+  }
+
+  & > .input-ph__text {
+    color: $ph_label_color;
+    cursor: text;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin: 0;
+    @include transform(translateY(-2rem));
+    @include transition(all 0.3s);
+  }
+
+  & > .input-ph__feedback {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    @include transition(all 0.5s)
+  }
+
+  & > input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid $ph_main_color;
+    color: $ph_main_color;
+    font-size: 2.25rem;
+    letter-spacing: -1px;
+    outline: 0;
+    text-align: center;
+    @include transition(all 0.3s);
+    width: 50%;
+    min-width: 50%;
+    &::-webkit-inner-spin-button {
+      opacity: 1;
+    }
+    &:focus {
+      max-width: 100%;
+      width: 100%;
+      & + p {
+        color: $ph_main_color;
+        font-size: 0.85rem;
+        @include transform(translateY(-4rem));
+      }
+    }
+  }
+  & > .input-ph__input_up {
+    max-width: 100%;
+    width: 100%;
+    text-overflow: ellipsis;
+    & + p {
+      font-size: 0.85rem;
+      @include transform(translateY(-4rem));
+    }
+  }
+
+}
+
+@include keyframes (input-ph-loading) {
+
+  0%, 100% {
+    width: 100%;
+  }
+
+  50% {
+    width: 0;
+  }
+
+}
+

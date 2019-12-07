@@ -1,0 +1,8 @@
+{
+  "preloader": {
+    "messageDefault" : [
+      "Загрузка",
+      "Loading"
+      ]
+  }
+}

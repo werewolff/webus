@@ -1,0 +1,85 @@
+$sign_width: 32px;
+$sign_height: 32px;
+
+//SignIn
+.sign_in ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sign_in ul li {
+  display: inline-block;
+  margin: 0.2em;
+  width: $sign_width + 2px;
+}
+
+.sign_in img {
+  border-radius: 50%;
+  width: $sign_width;
+  height: $sign_height;
+  cursor: pointer;
+}
+
+.sign_in img:hover {
+  width: $sign_width + 2px;
+  height: $sign_height + 2px;
+}
+
+.sign_in img:active {
+  width: $sign_width - 4px;
+  height: $sign_height - 4px;
+}
+
+//user_block
+.user_block {
+  max-height: 48px;
+}
+
+.user_block figure {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.user_block figcaption {
+  color: #00000080;
+  margin-left: 1em;
+}
+
+.user_block img {
+  box-shadow: 0 0 4px 3px #7c7c7c73;
+  border-radius: 50%;
+  max-height: 40px;
+  cursor: pointer;
+}
+
+.user_block a {
+  color: #7c7c7c;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.user_block a b:hover, .user_block a:hover:after {
+  color: #afaeae;;
+}
+
+.user_block a:active {
+
+}
+
+.user_block a:after {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.user_block .dropdown-menu {
+  top: 38px;
+  right: -16px;
+  padding: 0.5em 0.5em;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 0 30%;
+}

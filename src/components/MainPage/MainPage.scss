@@ -1,0 +1,26 @@
+.col-giveaway {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  -moz-transition: top 0.3s; /* Для Firefox */
+  -webkit-transition: top 0.3s; /* Для Safari, Chrome, iOS */
+  -o-transition: top 0.3s; /* Для Opera */
+  transition: top 0.3s;
+}
+
+.wrapper-post-info {
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  transition: flex 1s;
+}
+
+.post-info__enter {
+  flex: 0;
+}
+
+.post-info__leave{
+  flex: 0;
+}

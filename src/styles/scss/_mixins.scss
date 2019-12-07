@@ -1,0 +1,34 @@
+@mixin animation($animation...) {
+  -webkit-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+
+@mixin transition($transition...) {
+  -moz-transition: $transition; /* Для Firefox */
+  -webkit-transition: $transition; /* Для Safari, Chrome, iOS */
+  -o-transition: $transition; /* Для Opera */
+  transition: $transition;
+}
+
+@mixin transform($transform...) {
+  -moz-transform: $transform; /* Для Firefox */
+  -ms-transform: $transform; /* Для IE */
+  -webkit-transform: $transform; /* Для Safari, Chrome, iOS */
+  -o-transform: $transform; /* Для Opera */
+  transform: $transform;
+}
+
+@mixin keyframes($name){
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}

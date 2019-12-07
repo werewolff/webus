@@ -1,0 +1,42 @@
+{
+  "signIn": {
+    "user": {
+      "settings": [
+        "Настройки",
+        "Settings"
+      ],
+      "exit": [
+        "Выход",
+        "Exit"
+      ]
+    },
+    "auth": {
+      "linkVK": {
+        "title": [
+          "Авторизоваться через Вконтакте",
+          "Log in using VK"
+        ]
+      },
+      "linkIG": {
+        "title": [
+          "Авторизоваться через Инстаграм",
+          "Log in using Instagram"
+        ]
+      }
+    },
+    "error": {
+      "header": [
+        "Ошибка",
+        "Error"
+      ],
+      "504": [
+        "Сервер недоступен",
+        "Server is not available"
+      ],
+      "default": [
+        "Ошибка идентификации",
+        "Authentication error"
+      ]
+    }
+  }
+}

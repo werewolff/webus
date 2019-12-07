@@ -1,0 +1,18 @@
+{
+  "mainPage": {
+    "placeholderInputURI" : [
+      "Введите ссылку на конкурс",
+      "Enter link to giveaway"
+    ],
+    "submit" : [
+      "Определить!",
+      "GO!"
+    ],
+    "error" : {
+      "invalidURI" : [
+        "Некорректная ссылка",
+        "Invalid link"
+      ]
+    }
+  }
+}

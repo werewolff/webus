@@ -1,0 +1,20 @@
+{
+  "randomPage": {
+    "header": [
+      "Генератор случайного числа",
+      "Random number generator"
+    ],
+    "buttonStart": [
+      "Сгенерировать",
+      "Generate"
+    ],
+    "minInputText": [
+      "минимум",
+      "minimum"
+    ],
+    "maxInputText": [
+      "максимум",
+      "maximum"
+    ]
+  }
+}

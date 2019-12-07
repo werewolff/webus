@@ -1,0 +1,65 @@
+@import "../../styles/scss/mixins";
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #7c7c7c;
+  letter-spacing: 1.3rem;
+  & > p {
+    text-shadow: 0 0 5px #7c7c7c;
+    & > span{
+      opacity: 0;
+      font-weight: 900;
+    }
+    & > span:nth-child(1) {
+      @include animation(preloader-point-1 3s infinite linear)
+     }
+    & > span:nth-child(2) {
+      @include animation(preloader-point-2 3s infinite linear)
+    }
+    & > span:nth-child(3) {
+      @include animation(preloader-point-3 3s infinite linear)
+    }
+  }
+}
+
+@include keyframes('preloader-point-1'){
+  0%,90%{
+    opacity: 0;
+  }
+
+  10%{
+    opacity: 1
+  }
+
+  60%{
+    opacity: 1
+  }
+
+}
+@include keyframes('preloader-point-2'){
+  0%,25%,90%{
+    opacity: 0;
+  }
+
+  35%{
+    opacity: 1
+  }
+  60%{
+    opacity: 1
+  }
+
+}
+@include keyframes('preloader-point-3'){
+  0%,50%,90%{
+    opacity: 0;
+  }
+
+  60%{
+    opacity: 1
+  }
+}
